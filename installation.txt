@@ -1,1 +1,2 @@
 W tym pliku są wszystkie informacje na temat instalacji
+Na początku zainstaluj git.
