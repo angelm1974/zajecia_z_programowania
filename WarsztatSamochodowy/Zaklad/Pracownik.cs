@@ -30,6 +30,7 @@ namespace Zaklad
         Elektryk,
         Lakiernik,
         Blacharz,
-        Diagnosta
+        Diagnosta,
+        Właściciel,
     }
 }

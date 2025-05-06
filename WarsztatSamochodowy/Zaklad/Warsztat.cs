@@ -4,6 +4,7 @@ namespace Zaklad{
     {
         public static List<Pracownik> Pracownicy { get; set; } = new List<Pracownik>();
         public static List<Klient> Klienci { get; set; } = new List<Klient>();
+        public static List<Zlecenie> Zlecenia { get; set; } = new List<Zlecenie>();
         public string Nazwa { get; set; }
         public string Adres { get; set; }
         public string Telefon { get; set; }

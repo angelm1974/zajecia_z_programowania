@@ -5,7 +5,7 @@ internal class Program
     public static Warsztat Warsztat { get; set; }
     private static void Main(string[] args)
     {
-        List<Osoba> osobyNaFirmie = new List<Osoba>();
+        
 
         Warsztat warsztat = new Warsztat();
 
@@ -19,6 +19,7 @@ internal class Program
         Warsztat = Ustawienia(warsztat);
         
         WyswietlInformacje();
+        Pomocnicze.Menu();
         
     }
 
@@ -40,7 +41,7 @@ internal class Program
         Adam.Adres = "ul. Mechaników 5, 00-001 Warszawa";
         Adam.Telefon = "123-456-789";
         Adam.Pensja=3500;
-        Adam.stanowiskoPracownika=StanowiskoPracy.Lakiernik;
+        Adam.stanowiskoPracownika=StanowiskoPracy.Właściciel;
         warsztat.dodajPracownika(Adam);
 
         return warsztat;

@@ -4,6 +4,7 @@ namespace Zaklad{
 
     public struct Zlecenie
     {
+        private static int idCounter = 0; // Static counter for unique ID generation
         public List<Praca> ?ListaPrac { get; set; }
         public int Id { get; set; }
         public string ?Status { get; set; }
@@ -11,6 +12,15 @@ namespace Zaklad{
         public string ?NumerZlecenia { get; set; }
         public Samochod samochod { get; set; }
 
+        public Zlecenie(string status, string notatka, string numerZlecenia, Samochod samochod)
+        {
+            Id = ++idCounter; // Increment the counter for each new instance
+            Status = status;
+            Notatka = notatka;
+            NumerZlecenia = numerZlecenia;
+            this.samochod = samochod;
+            ListaPrac = null;
+        }
         public void dodajPrace(Praca praca)
         {
             if (ListaPrac == null)
@@ -45,5 +55,8 @@ namespace Zaklad{
         {
             Console.WriteLine($"Numer Zlecenia: {NumerZlecenia}, Status: {Status}, Notatka: {Notatka}, Samochod: {samochod.Marka} {samochod.Model}");
         }
+
+
+
     }
 }
